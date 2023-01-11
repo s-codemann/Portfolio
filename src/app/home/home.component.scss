@@ -247,6 +247,20 @@ border: 2px  solid chartreuse;
 }
 @media (min-width:1050px){
     .container{
+        .intro-text{
+            .full_name{
+                
+                &:hover{
+font-size: 2rem;
+                    letter-spacing: 0px;
+                                        span{
+
+
+
+                    }
+                }
+            }
+        }
         .intro-box{
             .pitch{
                 

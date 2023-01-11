@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ViewChild } from '@angular/core';
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
+@ViewChild("description") description:any;
+
 skillImgLink= "assets/img/css.png"
 skillDescription="Throughout the projects I've built and by continuing to learn about the designing language of the web, I have aquired a solid grasp on CSS concepts and preprocessing languages like SCSS";
 skills:Array<any> = [{name:"CSS",skillImgLink:"assets/img/css.png",skillDescription:"Throughout the projects I've built and by continuing to learn about the designing language of the web, I have aquired a solid grasp on CSS concepts and preprocessing languages like SCSS"},
@@ -16,11 +18,15 @@ skills:Array<any> = [{name:"CSS",skillImgLink:"assets/img/css.png",skillDescript
 {name:"Git",skillImgLink:"assets/img/git.png",skillDescription:"Essential for version control, backups and team collaboration, git has been with me from early on in my journey and my workflow would be unimaginable without it"},
 {name:"REST-API",skillImgLink:"assets/img/rest.png",skillDescription:"APIs are essential for many services and I have used them for use cases ranging from pagination to CRUD/database applications"},
 {name:"Design",skillImgLink:"assets/img/design.png",skillDescription:"Even if my focus is on the development side of things, I have learned and continue to educate myself important design principles"},
+{name:"Typescript",skillImgLink:"assets/img/ts.png",skillDescription:"Giving Javascript a typed compiler is a great asset for project building"}
 //{name:,skillImgLink:,skillDescription:},
 ]
 selectSkill(clickedSkill:any){
   this.skillImgLink=clickedSkill.skillImgLink,this.skillDescription=clickedSkill.skillDescription,clickedSkill.focused=true;
-  this.skills.filter((skill)=>skill != clickedSkill).forEach(skill=> skill.focused=false)
+  this.skills.filter((skill)=>skill != clickedSkill).forEach(skill=> skill.focused=false);
+  //this.description.nativeElement.scrollIntoView();
+  console.log(this.description.nativeElement.getBoundingClientRect())
+  window.scrollBy({left:0, top:this.description.nativeElement.getBoundingClientRect().top -150 ,behavior:'smooth'} )
 
 }
   constructor() { }

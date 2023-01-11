@@ -26,7 +26,6 @@ else {this.disappearIntvs.forEach((intv:any)=>
   clearTimeout(intv)
 );
 this.showNav=true}
-console.log(disappearTimeout)
 
 this.yOffset = newYOffset;
 }

@@ -20,7 +20,6 @@ showLinks:boolean=false;
     let element = document.getElementById(id);
     let yOffset = 0;
     let y = element?.getBoundingClientRect().top! + window.pageYOffset + yOffset
-    console.log(document.getElementById(id))
    
     window.scrollTo({top:y, behavior:"smooth"})
   }
@@ -28,10 +27,8 @@ showLinks:boolean=false;
   toggleBurger(){
     let burgerButton = this.burger.nativeElement;
     let linksCont = burgerButton.parentElement;
-    console.log(linksCont)
     burgerButton.classList.toggle("expanded")
    burgerButton.classList.contains("expanded") ? this.showLinks=true :this.showLinks=false;
-   console.log(this.showLinks)
 
 
   }
@@ -39,10 +36,8 @@ showLinks:boolean=false;
 constructor(){}
 
   ngOnInit(): void {
-    setInterval(()=>console.log(this.showNav),5000)
 
    }
   ngAfterViewInit(): void {
-    console.log(this.burger)
   }
 }

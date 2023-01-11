@@ -9,10 +9,11 @@ export class ProjectsComponent implements OnInit {
 
 projects:Array<any>=[
   {
-    name:"Join",category:"angular",imgLink:"assets/img/kanban.png"
+    name:"Join",category:"javascript",imgLink:"assets/img/kanban.png",githubLink:"https://github.com/s-codemann/MyKanban",liveLink:"https://kanban-sb.netlify.app"
   },
-  {name:"pokedex",category:"javascript",imgLink:"assets/img/pokedex.png"},
-  {name:"El pollo loco",category:"javascript",imgLink:"assets/img/polloloco.png"}
+  {name:"pokedex",category:"javascript",imgLink:"assets/img/pokedex.png",githubLink:"https://github.com/s-codemann/Pokedex",liveLink:"https://pokedex-sb.netlify.app"},
+  {name:"El pollo loco",category:"javascript",imgLink:"assets/img/polloloco.png",githubLink:"https://github.com/s-codemann/polloLoco",liveLink:"https://polloloco.netlify.app"}
+
  
 ]
 filteredProjects:Array<any>=this.projects

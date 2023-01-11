@@ -14,7 +14,10 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component'
-import {FormsModule} from "@angular/forms"
+import {FormsModule} from "@angular/forms";
+import { EmailService } from './services/email.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,9 @@ import {FormsModule} from "@angular/forms"
     SkillsComponent,
     ProjectsComponent,
     AboutMeComponent,
-    ContactSectionComponent
+    ContactSectionComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -33,6 +38,8 @@ import {FormsModule} from "@angular/forms"
     CommonModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule
+  
   
     
   ],

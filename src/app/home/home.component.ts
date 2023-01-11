@@ -37,7 +37,7 @@ descriptors:Array<string>=["Web Worker","Digital Dreamer","Task Tackler"];
   ngOnInit(): void {
     let i =0;
     
-    setInterval(()=>{setTimeout(()=>{this.descriptor = this.descriptors[i%3];console.log("now")},0);this.descriptorTransition++;i++},6500)
+    setInterval(()=>{setTimeout(()=>{this.descriptor = this.descriptors[i%3];},0);this.descriptorTransition++;i++},6500)
     
   }
 
