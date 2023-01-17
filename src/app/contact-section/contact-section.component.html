@@ -1,6 +1,23 @@
 <div class="cont">
   <h2>Contact Me</h2>
-  <form #myForm="ngForm" (submit)="submit()">
+  <div *ngIf="formSubmitted" class="submitted">
+    <span>Thank you for your Message</span>
+    <button (click)="enableForm()">New Message</button>
+  </div>
+  <form #myForm="ngForm" *ngIf="!formSubmitted" (submit)="submit()">
+    <div class="loading" *ngIf="loading">
+      <svg class="spinner" viewBox="0 0 100 100">
+        <circle class="bottom" cx="50" cy="50" r="40"></circle>
+        <circle
+          pathLength="100"
+          id="top"
+          class="top"
+          cx="50"
+          cy="50"
+          r="40"
+        ></circle>
+      </svg>
+    </div>
     <div class="information">
       <div class="label_input">
         <label for="name">Name</label>
@@ -52,5 +69,6 @@
       spellcheck="false"
     ></textarea>
     <button *ngIf="myForm.valid" type="submit">Submit</button>
+    <button type="button" *ngIf="myForm.invalid">Submit</button>
   </form>
 </div>

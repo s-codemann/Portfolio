@@ -12,7 +12,8 @@ projects:Array<any>=[
     name:"Join",category:"javascript",imgLink:"assets/img/kanban.png",githubLink:"https://github.com/s-codemann/MyKanban",liveLink:"https://kanban-sb.netlify.app"
   },
   {name:"pokedex",category:"javascript",imgLink:"assets/img/pokedex.png",githubLink:"https://github.com/s-codemann/Pokedex",liveLink:"https://pokedex-sb.netlify.app"},
-  {name:"El pollo loco",category:"javascript",imgLink:"assets/img/polloloco.png",githubLink:"https://github.com/s-codemann/polloLoco",liveLink:"https://polloloco.netlify.app"}
+  {name:"El pollo loco",category:"javascript",imgLink:"assets/img/polloloco.png",githubLink:"https://github.com/s-codemann/polloLoco",liveLink:"https://polloloco.netlify.app"},
+  {name: "This Website", category:"angular",imgLink:"assets/img/portfolio.png",githubLink:"https://github.com/s-codemann/Portfolio",liveLink:"/#"}
 
  
 ]

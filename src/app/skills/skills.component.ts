@@ -19,13 +19,10 @@ skills:Array<any> = [{name:"CSS",skillImgLink:"assets/img/css.png",skillDescript
 {name:"REST-API",skillImgLink:"assets/img/rest.png",skillDescription:"APIs are essential for many services and I have used them for use cases ranging from pagination to CRUD/database applications"},
 {name:"Design",skillImgLink:"assets/img/design.png",skillDescription:"Even if my focus is on the development side of things, I have learned and continue to educate myself important design principles"},
 {name:"Typescript",skillImgLink:"assets/img/ts.png",skillDescription:"Giving Javascript a typed compiler is a great asset for project building"}
-//{name:,skillImgLink:,skillDescription:},
 ]
 selectSkill(clickedSkill:any){
   this.skillImgLink=clickedSkill.skillImgLink,this.skillDescription=clickedSkill.skillDescription,clickedSkill.focused=true;
   this.skills.filter((skill)=>skill != clickedSkill).forEach(skill=> skill.focused=false);
-  //this.description.nativeElement.scrollIntoView();
-  console.log(this.description.nativeElement.getBoundingClientRect())
   window.scrollBy({left:0, top:this.description.nativeElement.getBoundingClientRect().top -150 ,behavior:'smooth'} )
 
 }

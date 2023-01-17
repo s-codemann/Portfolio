@@ -12,15 +12,21 @@ import { EmailService } from '../services/email.service';
 export class ContactSectionComponent implements OnInit, AfterViewInit {
 @ViewChild("myForm") myForm:any
 
-request = new Message("","","","")
+request = new Message("","","","");
+loading:boolean=false;
+formSubmitted:boolean=false;
 
 submit(){
+  this.loading=true;
   this.EmailService.sendMessage(this.request)
   .subscribe(
-    data => console.log(data),
+    data => {console.log(data); this.loading = false; this.formSubmitted=true},
     error => console.error(error)
     
   )
+}
+enableForm(){
+  this.formSubmitted=false;
 }
   constructor(private EmailService:EmailService) {
    }
