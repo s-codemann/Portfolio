@@ -12,9 +12,7 @@ nav{
     .burger{
         display: none;
     }
-        //background: linear-gradient(170deg,var(--secondary-color), rgb(111, 219, 111), rgb(111, 219, 111), var(--secondary-color));
-       // background: linear-gradient(100deg,rgba(132, 244, 186, 0.944),rgb(218, 217, 217),rgba(132, 244, 186, 0.944),rgba(98, 251, 172, 0.944),rgba(209, 207, 207, 0.912));
-//background-color: rgba(95, 160, 252, 0.944);
+
 background-color: rgb(10, 10, 10);
 font-family: Source Code Pro;
         text-shadow: -2px 1px rgb(61, 34, 31),1px rgba(82, 202, 220, 0.214), -2px -1px rgb(37, 30, 30), 1px -1px rgb(35, 35, 33);
@@ -43,16 +41,12 @@ font-family: Source Code Pro;
         .link{
             height: 40%;
             border: 2px solid chartreuse;
-           // border-right: 3px dotted chartreuse;
             border-radius: 10% ;
             white-space: nowrap;
         margin:0 5px;
 color: white;
-//,#5c5757;
 padding:3%;
 cursor: pointer;
-//background-color: rgba(255, 255, 255, 0.463);
-//border-radius: 50% 10px;
         text-decoration: none;
         font-size: 1.2rem;
         position:relative;
@@ -90,33 +84,7 @@ cursor: pointer;
 
         }
     }
-//     .home{
-//         border:3px solid black;
-//         height:80%;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//        min-width: 100px;
-//         padding:3px 10px;
-//         position: relative;
-// &:hover{
 
-//         scale:1.1;
-//     cursor: pointer;
-// }
-//         .homebutton{
-//             transition: all 120ms;
-//             height:80%;
-//             //margin-right: 10px;
-
-//             &:hover{
-//             }
-            
-//         }
-//         .backarrow{
-//             height:50%;
-//         }
-//     }
 }
 
 @media (max-width:1000px) {

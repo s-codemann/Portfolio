@@ -32,7 +32,7 @@
             cursor: pointer;
             transition: all 300ms;
            
-&:hover{
+&:hover,:focus-within{
     background-color: var(--primary-blue);
     color:white;
 }
@@ -116,12 +116,11 @@ padding: 10px 10px;
             height:3rem;
             padding:0 10px;
             border: 1px solid #fa2759;
-            //background-color: #fa275922;
             background-color: rgb(233, 210, 210);
             color:black;
         box-sizing: border-box;
         position: relative;
-        //text-align: center;
+            font-family: Montserrat;
             &.ng-touched{
 
                 &.ng-invalid{
@@ -132,6 +131,7 @@ padding: 10px 10px;
                 &.ng-valid{
                     background-color: rgba(128, 255, 0, 0.484);
                     border: 1px solid chartreuse;
+                    color:white;
                     
                  
                 }
@@ -165,7 +165,7 @@ box-shadow: 0 0 3px 5px white;
         color: var(--primary-blue);
         cursor: pointer;
         transition: all 300ms;
-        &:hover{
+        &:hover,&:focus-within{
             background-color: var(--primary-blue);
             color: white;
         }
