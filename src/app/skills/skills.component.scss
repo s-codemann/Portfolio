@@ -135,6 +135,8 @@ translate: 0 -5px;
             position: relative;
             flex-direction: column;
             justify-content: space-around;
+            align-items: center;
+            margin-right: 0;
             height: calc(100vh - 150px);
         
             padding: 20px;
@@ -148,7 +150,7 @@ translate: 0 -5px;
             .img_cont{
                 height: 90px;
                 width: 90px;
-                
+                margin-right: 0;
 
                 img{}
             }
