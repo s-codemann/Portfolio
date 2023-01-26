@@ -3,6 +3,7 @@ import { Form, FormControl, FormsModule } from '@angular/forms';
 import { ViewChild } from '@angular/core';
 import { Message } from '../message';
 import { EmailService } from '../services/email.service';
+import { ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-contact-section',
@@ -10,7 +11,8 @@ import { EmailService } from '../services/email.service';
   styleUrls: ['./contact-section.component.scss']
 })
 export class ContactSectionComponent implements OnInit, AfterViewInit {
-@ViewChild("myForm") myForm:any
+@ViewChild("myForm") myForm:any;
+
 
 request = new Message("","","","");
 loading:boolean=false;
@@ -25,6 +27,7 @@ submit(){
     
   )
 }
+
 enableForm(){
   this.formSubmitted=false;
 }

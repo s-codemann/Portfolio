@@ -17,7 +17,17 @@ import { ContactSectionComponent } from './contact-section/contact-section.compo
 import {FormsModule} from "@angular/forms";
 import { EmailService } from './services/email.service';
 import { HttpClientModule } from '@angular/common/http';
+import { DatenschutzComponent } from './datenschutz/datenschutz.component';
+import { ImpressumComponent } from './impressum/impressum.component';
+import {RouterModule, Routes} from "@angular/router";
+import { IndexComponent } from './index/index.component';
+import { LegalComponent } from './legal/legal.component'
 
+const myRoutes: Routes =[
+ { path:"datenschutz", component: DatenschutzComponent},
+ {path:"impressum",component:ImpressumComponent},
+ {path:"",component:IndexComponent}
+]
 
 @NgModule({
   declarations: [
@@ -29,16 +39,23 @@ import { HttpClientModule } from '@angular/common/http';
     ProjectsComponent,
     AboutMeComponent,
     ContactSectionComponent,
+    DatenschutzComponent,
+    ImpressumComponent,
+    IndexComponent,
+    LegalComponent,
     
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     CommonModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(myRoutes, {scrollPositionRestoration:"enabled"}),
+    
+    
+  
   
   
     
